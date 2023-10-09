@@ -1,0 +1,168 @@
+.divPrincipalSorteio{
+border-radius: 5px;
+padding: 20px;
+
+background-image: url('../../assets/img/fundo-sorteio.jpg'); 
+background-size: 100%;
+}
+
+.divDadosSorteio{
+  background-color: #064a8d;
+  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.divGanhadoresSorteio{
+  color:white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.divParabensGanhadoresSorteio{
+  color:white;
+  font-weight: 600;
+}
+
+.divListaGanhadoresSorteio{
+  color:white;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.divCotaGanhadoresSorteio{
+  color:yellow;
+  border: 2px solid #1976d2;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.diVoltar{
+  text-align: center;
+}
+
+.buttonVoltar{
+  border: 2px solid #064a8d;
+  padding: 5px;
+  background-color: white;
+  font-weight: 500;
+  color: #064a8d;
+  border-radius: 5px;
+}
+
+.divNumeroParticipante{
+  padding: 5px; 
+  color: #514f4f;
+}
+
+.divSorteio{
+  background-color: transparent;
+  text-align: end;
+}
+
+.btnSorteio{
+  --bs-btn-color: #000;
+  --bs-btn-bg: #1976d2;
+  --bs-btn-border-color: #064a8d;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #064a8d;
+  --bs-btn-hover-border-color: #064a8d;
+  --bs-btn-focus-shadow-rgb: 11, 172, 204;
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: #064a8d;
+  --bs-btn-active-border-color: #064a8d;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: white;
+  --bs-btn-disabled-bg: #064a8d;
+  --bs-btn-disabled-border-color: #064a8d;
+  color: white;
+}
+
+// .btnSorteio{
+//   --bs-btn-color: #000;
+//   --bs-btn-bg: #1976d2;
+//   --bs-btn-border-color: #064a8d;
+//   --bs-btn-hover-color: white;
+//   --bs-btn-hover-bg: #064a8d;
+//   --bs-btn-hover-border-color: #064a8d;
+//   --bs-btn-focus-shadow-rgb: 11, 172, 204;
+//   --bs-btn-active-color: white;
+//   --bs-btn-active-bg: #064a8d;
+//   --bs-btn-active-border-color: #064a8d;
+//   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+//   --bs-btn-disabled-color: white;
+//   --bs-btn-disabled-bg: #064a8d;
+//   --bs-btn-disabled-border-color: #064a8d;
+//   color: white;
+// }
+
+
+
+.menu {
+background-color: #ddd;
+border-top-right-radius: 4px;
+border-top-left-radius: 4px;
+border-color: white;
+color: #868585;
+}
+
+
+.containerSorteio{
+
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menuItem{
+  background-color: white;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+  border: 2px solid #1976d2;
+}
+
+.buttonItem{
+  border: 0px;
+  padding: 5px;
+  width: 100%;
+  background-color: white;
+  font-weight: 500;
+  color: #1976d2;
+}
+
+.divLista{
+padding: 20px;
+border: 2px solid #ddd;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1976d2;
+  color: white;
+  border:1px solid #1976d2;
+  padding: 8px;
+
+}

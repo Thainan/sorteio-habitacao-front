@@ -1,0 +1,144 @@
+<div style="text-align: center;" *ngIf="carregando">
+    Carregando dados..
+</div>
+
+<div class="row" *ngIf="telaParticipante">
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
+        <div class="container">
+            <div class="row" >
+                <div class="col-sm-8 divNumeroParticipante">
+                    <h5> Total de participantes: {{totalParticipantes}}</h5>
+                </div>
+                <div class="col-sm-4 divSorteio">
+                    <button type="button" class="btn btnSorteio" (click)="sortear()">Realizar Sorteio</button>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="container">
+            <div class="row menu">
+                <div class="col menuItem">
+                    <button type="button" class="buttonItem" (click)="clickCota('idoso')">   
+                        IDOSOS
+                    </button>          
+                </div>
+                <div class="col menuItem">
+                    <button type="button" class="buttonItem" (click)="clickCota('deficientefisico')">   
+                        DEFICIENTES FÍSICOS
+                    </button>
+                </div>
+                <div class="col menuItem">
+                    <button type="button" class="buttonItem" (click)="clickCota('geral')">   
+                        GERAL
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 divLista">
+
+            <table cellspacing="0" class="table table-striped" id="idoso" *ngIf="clickIdoso">
+                <thead class="text-primary">
+                    <tr>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let idoso of listaIdoso">
+                        <td>{{ idoso.cpf }}</td>
+                        <td>{{ idoso.nome }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table cellspacing="0" class="table table-striped" id="deficiente" *ngIf="clickDeficienteFisico">
+                <thead class="text-primary">
+                    <tr>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let deficiente of listaDeficienteFisico">
+                        <td>{{ deficiente.cpf }}</td>
+                        <td>{{ deficiente.nome }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table cellspacing="0" class="table table-striped" id="geral" *ngIf="clickGeral">
+                <thead class="text-primary">
+                    <tr>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let geral of listaGeral">
+                        <td>{{ geral.cpf }}</td>
+                        <td>{{ geral.nome }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-sm-3"></div>
+</div>
+
+
+<div class="row" *ngIf="telaSorteado">
+    <div class="col-sm-12 diVoltar">
+        <button type="button" class="buttonVoltar" (click)="clickVoltar()">   
+            VOLTAR
+        </button> 
+
+    </div>
+    <br><br> 
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 divPrincipalSorteio">
+        <div class="col-sm-12 divDadosSorteio">
+            
+            <div class="divGanhadoresSorteio">
+                <h4>GANHADORES DO SORTEIO</h4>
+            </div>
+            <br/>
+
+            <div class="divCotaGanhadoresSorteio">
+                <h5>COTA IDOSO</h5>
+                <div class="divListaGanhadoresSorteio" *ngFor="let idoso of listaIdosoSorteado">
+                    {{idoso.cpf}} - {{idoso.nome}}
+                </div>
+            </div>
+            <br/>
+            <div class="divCotaGanhadoresSorteio">
+                <h5>COTA DEFICIENTE FÍSICO</h5>
+                <div class="divListaGanhadoresSorteio" *ngFor="let deficiente of listaDeficienteFisicoSorteado">
+                    {{deficiente.cpf}} - {{deficiente.nome}}
+                </div>
+            </div>
+            <br/>
+
+            <div class="divCotaGanhadoresSorteio">
+                <h5>COTA GERAL</h5>
+                <div class="divListaGanhadoresSorteio" *ngFor="let geral of listaGeralSorteado">
+                    {{geral.cpf}} - {{geral.nome}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+
+
+
+
+
+
+
+
